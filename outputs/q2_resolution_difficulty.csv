@@ -1,0 +1,16 @@
+complaint_type,total_requests,avg_resolution_days,min_resolution_days,max_resolution_days
+DOOR/WINDOW,135,2.64,0.36,5.38
+UNSANITARY CONDITION,365,2.59,0.34,5.68
+WATER LEAK,103,2.45,0.3,5.35
+PLUMBING,220,2.36,0.05,5.37
+PAINT/PLASTER,257,2.32,0.3,5.3
+ELECTRIC,118,2.26,0.36,5.18
+Damaged Tree,103,1.97,0.06,5.66
+Missed Collection,424,1.84,0.04,5.26
+Maintenance or Facility,129,1.72,0.0,5.02
+Noise,448,1.71,0.0,5.49
+Illegal Dumping,270,1.69,0.03,5.31
+Consumer Complaint,126,1.6,0.39,5.2
+HEAT/HOT WATER,594,1.44,0.01,5.45
+Street Condition,572,1.39,0.0,5.49
+Residential Disposal Complaint,156,1.35,0.01,5.26
