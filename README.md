@@ -14,15 +14,15 @@ This project demonstrates a full data pipeline from ingestion to insights:
 
 - **Python 3.10+**
 - **SQLite 3.35+**
-- **Internet connection** (for data download)
+
 
 ## 🚀 Quick Start
 
 ### 1. Setup Environment
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd nyc-311-analysis
+git clone https://github.com/Muddasir203/Data_Engineer_assesment.git
+cd Data_Engineer_assesment
 
 # Create and activate virtual environment
 python -m venv .venv
@@ -39,7 +39,7 @@ make run
 ```
 
 This will:
-1. Download NYC 311 data (last 1 day by default - optimized for <10MB database)
+1. Download NYC 311 data (last 1 day by default - optimized for <20MB database)
 2. Create SQLite database with normalized schema
 3. Run comprehensive analysis with 5 questions
 4. Generate visualizations and CSV outputs
@@ -94,17 +94,6 @@ The pipeline answers 5 meaningful questions about NYC 311 data:
 └── outputs/               # Analysis results
     ├── *.csv             # Data tables
     └── *.png             # Visualizations
-```
-
-## ⚙️ Configuration
-
-Environment variables (optional):
-```bash
-export START_DATE="2024-01-01"        # Data start date (ISO format)
-export END_DATE="2024-12-31"          # Data end date (ISO format)  
-export PAGE_SIZE="5000"               # API pagination size
-export SOCRATA_APP_TOKEN="your_token" # Optional: improves rate limits
-export DB_PATH="nyc311.sqlite"        # Database file path
 ```
 
 ## 🛠️ Available Commands
@@ -216,35 +205,6 @@ Core dependencies in `requirements.txt`:
 - **Modular Design**: Separated concerns (ETL vs Analysis)
 - **Testing**: Automated test suite
 
-## 🚨 Troubleshooting
-
-### Common Issues
-
-**1. API Rate Limits**
-```bash
-# Set app token for higher limits
-export SOCRATA_APP_TOKEN="your_token_here"
-```
-
-**2. Memory Issues with Large Datasets**
-```bash
-# Reduce date range
-export START_DATE="2024-10-01"
-export END_DATE="2024-10-01"
-```
-
-**3. Database Locked**
-```bash
-# Clean and restart
-make clean
-make run
-```
-
-**4. Missing Dependencies**
-```bash
-# Reinstall requirements
-pip install -r requirements.txt --force-reinstall
-```
 
 ## 📊 Output Files
 
@@ -260,35 +220,5 @@ After running analysis, check `outputs/` directory:
 - `q3_temporal_patterns.png` - Day/hour patterns (dual chart)
 - `q4_borough_comparison.png` - Borough comparison (dual chart)
 - `q5_time_series_trends.png` - Time series trends (dual chart)
-
-## 🎯 Evaluation Criteria Met
-
-✅ **Data Ingestion (25%)**: Clear, repeatable pipeline with error handling  
-✅ **Schema Design (20%)**: Normalized tables with proper keys and indexes  
-✅ **SQL Quality (20%)**: Correct, readable, performant queries  
-✅ **Python Craftsmanship (15%)**: Idiomatic code with docstrings and tests  
-✅ **Insight & Communication (15%)**: Meaningful questions with clear results  
-✅ **Polish & Extras (5%)**: Type hints, logging, comprehensive documentation  
-
-## 📝 License
-
-This project is for educational/demonstration purposes. NYC 311 data is public domain.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## �� Support
-
-For questions or issues:
-1. Check the troubleshooting section above
-2. Review the test output for error details
-3. Open an issue with full error logs
-
----
 
 **Ready to run**: `make run` 🚀
